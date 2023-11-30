@@ -1,0 +1,824 @@
+<!DOCTYPE html><html lang="fr"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Notre serveur est fait pour des centaines de curieux et d'amoureux de Minecraft !">
+    <meta name="theme-color" content="#3490DC">
+    <meta name="author" content="Azuriom">
+
+    <meta property="og:title" content="Vote • SurvivalWorld">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://survivalworld.fr/vote">
+    <meta property="og:image" content="https://survivalworld.fr/assets/themes/deluxe/banner.png?v1.0.17">
+    <meta property="og:description" content="Notre serveur est fait pour des centaines de curieux et d'amoureux de Minecraft !">
+    <meta property="og:site_name" content="SurvivalWorld">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Vote • SurvivalWorld">
+    <meta property="twitter:url" content="https://survivalworld.fr/vote">
+    <meta property="twitter:description" content="Notre serveur est fait pour des centaines de curieux et d'amoureux de Minecraft !">
+    <meta property="twitter:image" content="https://survivalworld.fr/assets/themes/deluxe/banner.png?v1.0.17">
+        <meta name="keywords" content="minecraft,survie,1.19,1.18,serveur minecraft,1.20,1.20.1,survivalworld">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="7awmxYhkRtx6DAJekgbxSJW9acjU0MEeR5GwNHTs">
+
+    <title>Vote • SurvivalWorld</title>
+
+    <!-- Favicon -->
+    <style data-tippy-stylesheet="">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;white-space:normal;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}</style><link rel="shortcut icon" href="https://survivalworld.fr/storage/img/logo.webp">
+
+
+    <!-- Fonts -->
+    <link href="https://fonts.bunny.net/css?family=nunito:400,700" rel="stylesheet">
+    <link href="https://fonts.bunny.net/css2?family=VT323&amp;display=swap" rel="stylesheet">
+    <link href="https://survivalworld.fr/assets/vendor/bootstrap-icons/bootstrap-icons.css?v1.0.17" rel="stylesheet">
+
+
+    <!-- Styles -->
+    
+    <style>
+        :root {
+            --settings-background: url("https://survivalworld.fr/storage/img/pano1.png");
+
+            --color-1:#252C4B;
+            --color-2:#2A2F5B;
+            --color-3:#1D1D3E;
+            --color-4:#091634;
+
+            --color-5:rgba(9,22,52, 0.85);
+
+
+            --text-color-1: #ffffff;
+            --text-color-2:  #C9BFFD;
+            --text-color-3:  #9391B6;
+
+
+            --text-color-4:  #ffffff;
+            --text-color-5:  #C1BEDA;
+            --text-color-6:  #9692AB;
+        }
+
+        .hide_noanim {
+            visibility: hidden;
+            opacity:0;
+        }
+        a[href]:not(.btn) {
+            text-decoration: none;
+            color:var(--text-color-2);
+        }
+        a[href]:not(.btn):hover {
+            text-decoration: underline;
+        }
+    </style>
+        <link href="https://survivalworld.fr/assets/themes/deluxe/css/components/sidebar.css?v1.0.17" rel="stylesheet">
+    <link href="https://survivalworld.fr/assets/vendor/bootstrap/css/bootstrap.min.css?v1.0.17" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/@jarstone/dselect/dist/css/dselect.css">
+    <link href="https://survivalworld.fr/assets/themes/deluxe/css/libraries/animations.css?v1.0.17" rel="stylesheet">
+    <link href="https://survivalworld.fr/assets/themes/deluxe/css/libraries/core.css?v1.0.17" rel="stylesheet">
+    <link href="https://survivalworld.fr/assets/themes/deluxe/css/theme.css?v1.0.17" rel="stylesheet">
+    <link href="https://survivalworld.fr/assets/themes/deluxe/css/libraries/responsive.css?v1.0.17" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css">
+<link href="https://survivalworld.fr/assets/themes/deluxe/css/plugins/vote.css?v1.0.17" rel="stylesheet">
+<link href="https://survivalworld.fr/assets/themes/deluxe/css/components/ranks.css?v1.0.17" rel="stylesheet">
+<style>
+    #vote-card .spinner-parent {
+            position: absolute;
+            opacity:0;
+            visibility: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: transparent;
+            backdrop-filter:blur(0);
+            border-radius:15;
+            z-index: 50;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            transition:all ease 0.3s;
+        }
+
+        #vote-card.voting .spinner-parent {
+            opacity:1;
+
+            visibility: visible;
+            background: rgba(131, 131, 131, 0.062);
+            backdrop-filter:blur(7px);
+            transition:all ease 0.3s;
+        }
+</style>
+
+        <!-- Page level styles -->
+
+
+<meta http-equiv="origin-trial" content="As0hBNJ8h++fNYlkq8cTye2qDLyom8NddByiVytXGGD0YVE+2CEuTCpqXMDxdhOMILKoaiaYifwEvCRlJ/9GcQ8AAAB8eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="AgRYsXo24ypxC89CJanC+JgEmraCCBebKl8ZmG7Tj5oJNx0cmH0NtNRZs3NB5ubhpbX/bIt7l2zJOSyO64NGmwMAAACCeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiV2ViVmlld1hSZXF1ZXN0ZWRXaXRoRGVwcmVjYXRpb24iLCJleHBpcnkiOjE3MTk1MzI3OTksImlzU3ViZG9tYWluIjp0cnVlfQ=="><meta http-equiv="origin-trial" content="A/ERL66fN363FkXxgDc6F1+ucRUkAhjEca9W3la6xaLnD2Y1lABsqmdaJmPNaUKPKVBRpyMKEhXYl7rSvrQw+AkAAACNeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6OdGH3fVf4eKRDbXb4thXA4InNqDJDRhZ8U533U/roYjp4Yau0T3YSuc63vmAs/8ga1cD0E3A7LEq6AXk1uXgsAAACTeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiRmxlZGdlQmlkZGluZ0FuZEF1Y3Rpb25TZXJ2ZXIiLCJleHBpcnkiOjE3MTkzNTk5OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><link rel="stylesheet" type="text/css" href="https://web.webpushs.com/dist/css/push/sendpulse-prompt.min.css?v=261703545200000" media="all"><link rel="stylesheet" type="text/css" href="https://web.webpushs.com/dist/css/push/sendpulse-prompt.min.css?v=261703545200000" media="all"></head>
+<body>
+
+    <div id="app" class="vote-home">
+        <nav id="sidebar">
+    <div class="sidebar-start">
+        <a class="sidebar-image sidebar-link" href="https://survivalworld.fr">
+            <span class="icon">
+                <img src="https://survivalworld.fr/storage/img/logo.webp" alt="">
+            </span>
+            <span class="text"></span>
+        </a>
+    </div>
+    <div class="sidebar-middle">
+
+                                <a href="https://survivalworld.fr" class="sidebar-link">
+
+                                <i class="icon bi bi-house-door-fill"></i>
+                                <span class="text"> Accueil</span>
+            </a>
+                                            <a href="https://shop.survivalworld.fr/" class="sidebar-link" target="_blank" rel="noopener noreferrer">
+
+                                <i class="icon bi bi-bag-fill"></i>
+                                <span class="text"> Boutique</span>
+            </a>
+                                            <button data-toggle="sidebar-dropdown" data-dropdown-target="12" class="sidebar-link">
+                                <i class="icon bi bi-chat-left-heart-fill"></i>
+                                <span class="text">
+                     Vote
+                    <i class="bi bi-chevron-right me-4"></i>
+                </span>
+            </button>
+                                            <a href="https://www.notion.so/survivalworld/Wiki-SurvivalWorld-d35991f2517544b09302af87ebd1c12c" class="sidebar-link opacity-0 d-none" target="_blank" rel="noopener noreferrer">
+
+                                <i class="icon bi bi-info-circle"></i>
+                                <span class="text"> Wiki</span>
+            </a>
+                                            <button data-toggle="sidebar-dropdown" data-dropdown-target="3" class="sidebar-link opacity-0 d-none">
+                                <i class="icon bi bi-three-dots"></i>
+                                <span class="text">
+                     Autre
+                    <i class="bi bi-chevron-right me-4"></i>
+                </span>
+            </button>
+                            <button data-toggle="sidebar-dropdown" data-dropdown-target="more" class="sidebar-link">
+            <i class="icon bi bi-three-dots"></i>
+            <span class="text">
+                Autres                <i class="bi bi-chevron-right me-4"></i>
+            </span>
+        </button>
+    </div>
+    <div class="sidebar-end">
+                <a href="https://survivalworld.fr/user/login" class="sidebar-btn sidebar-link">
+            <i class="icon bi bi-person-fill"></i>
+            <span class="text">Connexion</span>
+        </a>
+
+                <a href="https://survivalworld.fr/user/register" class="sidebar-btn sidebar-btn-2 sidebar-link">
+            <i class="icon bi bi-people-fill"></i>
+            <span class="text">Inscription</span>
+        </a>
+                    </div>
+    <div class="sidebar-dropdown-body hide_anim" data-dropdown-state="no" data-dropdown-id="more" style="top: 296px;">
+    <a href="https://www.notion.so/survivalworld/Wiki-SurvivalWorld-d35991f2517544b09302af87ebd1c12c" class="sidebar-link" target="_blank" rel="noopener noreferrer">
+
+                                <i class="icon bi bi-info-circle"></i>
+                                <span class="text"> Wiki</span>
+            </a><button data-toggle="sidebar-dropdown" data-dropdown-target="3" class="sidebar-link">
+                                <i class="icon bi bi-three-dots"></i>
+                                <span class="text">
+                     Autre
+                    <i class="bi bi-chevron-right me-4"></i>
+                </span>
+            </button></div>
+                                                    <div class="sidebar-dropdown-body hide_anim" data-dropdown-state="no" data-dropdown-id="12" style="top: 232px;">
+                                <a href="https://survivalworld.fr/vote" class="sidebar-link  active ">
+                                        <i class="icon bi bi-1-circle-fill"></i>
+                                        <span class="text">
+                         Vote
+                    </span>
+                </a>
+                                <a href="https://survivalworld.fr/shop" class="sidebar-link ">
+                                        <i class="icon bi bi-2-circle-fill"></i>
+                                        <span class="text">
+                         Boutique des votes
+                    </span>
+                </a>
+                            </div>
+                                            <div class="sidebar-dropdown-body hide_anim" data-dropdown-state="no" data-dropdown-id="3" style="top: 296px; min-height: 128px;">
+                                <a href="https://survivalworld.fr/staff" class="sidebar-link ">
+                                        <i class="icon bi bi-patch-check"></i>
+                                        <span class="text">
+                         Équipe SurvivalWorld
+                    </span>
+                </a>
+                                <a href="https://survivalworld.myspreadshop.fr/" class="sidebar-link " target="_blank" rel="noopener noreferrer">
+                                        <i class="icon bi bi-brightness-high-fill"></i>
+                                        <span class="text">
+                         Goodies
+                    </span>
+                </a>
+                                <a href="https://survivalworld.fr/cgu" class="sidebar-link ">
+                                        <i class="icon bi bi-file-earmark-text"></i>
+                                        <span class="text">
+                         CGU
+                    </span>
+                </a>
+                                <a href="https://survivalworld.fr/cgv" class="sidebar-link ">
+                                        <i class="icon bi bi-file-earmark-text"></i>
+                                        <span class="text">
+                         CGV
+                    </span>
+                </a>
+                            </div>
+            </nav>
+<nav id="sidebar-mobile" class="pb-4">
+        <a class="sidebar-image sidebar-link" href="https://survivalworld.fr">
+            <span class="icon py-4">
+                <img src="https://survivalworld.fr/storage/img/logo.webp" alt="">
+            </span>
+            <span class="text">SurvivalWorld</span>
+        </a>
+                                <a href="https://survivalworld.fr" class="sidebar-link ">
+                                <i class="icon bi bi-house-door-fill"></i>
+                
+                <span class="text">
+                     Accueil
+                </span>
+            </a>
+                                            <a href="https://shop.survivalworld.fr/" class="sidebar-link " target="_blank" rel="noopener noreferrer">
+                                <i class="icon bi bi-bag-fill"></i>
+                
+                <span class="text">
+                     Boutique
+                </span>
+            </a>
+                                            <button data-bs-toggle="collapse" data-bs-target="#dropdownMobile2" class="sidebar-link">
+                                <i class="icon bi bi-chat-left-heart-fill"></i>
+                                <span class="text">
+                     Vote
+                    <i class="bi bi-chevron-right"></i>
+                </span>
+            </button>
+            <div id="dropdownMobile2" class="collapse">
+                                <a href="https://survivalworld.fr/vote" class="sidebar-link  active ">
+                                        <i class="icon bi bi-1-circle-fill"></i>
+                    
+                    <span class="text">
+                         Vote
+                    </span>
+                </a>
+                                <a href="https://survivalworld.fr/shop" class="sidebar-link ">
+                                        <i class="icon bi bi-2-circle-fill"></i>
+                    
+                    <span class="text">
+                         Boutique des votes
+                    </span>
+                </a>
+                
+            </div>
+                                            <a href="https://www.notion.so/survivalworld/Wiki-SurvivalWorld-d35991f2517544b09302af87ebd1c12c" class="sidebar-link " target="_blank" rel="noopener noreferrer">
+                                <i class="icon bi bi-info-circle"></i>
+                
+                <span class="text">
+                     Wiki
+                </span>
+            </a>
+                                            <button data-bs-toggle="collapse" data-bs-target="#dropdownMobile4" class="sidebar-link">
+                                <i class="icon bi bi-three-dots"></i>
+                                <span class="text">
+                     Autre
+                    <i class="bi bi-chevron-right"></i>
+                </span>
+            </button>
+            <div id="dropdownMobile4" class="collapse">
+                                <a href="https://survivalworld.fr/staff" class="sidebar-link ">
+                                        <i class="icon bi bi-patch-check"></i>
+                    
+                    <span class="text">
+                         Équipe SurvivalWorld
+                    </span>
+                </a>
+                                <a href="https://survivalworld.myspreadshop.fr/" class="sidebar-link " target="_blank" rel="noopener noreferrer">
+                                        <i class="icon bi bi-brightness-high-fill"></i>
+                    
+                    <span class="text">
+                         Goodies
+                    </span>
+                </a>
+                                <a href="https://survivalworld.fr/cgu" class="sidebar-link ">
+                                        <i class="icon bi bi-file-earmark-text"></i>
+                    
+                    <span class="text">
+                         CGU
+                    </span>
+                </a>
+                                <a href="https://survivalworld.fr/cgv" class="sidebar-link ">
+                                        <i class="icon bi bi-file-earmark-text"></i>
+                    
+                    <span class="text">
+                         CGV
+                    </span>
+                </a>
+                
+            </div>
+                                        <a href="https://survivalworld.fr/user/login" class="sidebar-btn mt-3 sidebar-link">
+                <i class="icon bi bi-person-fill"></i>
+                <span class="text">Connexion</span>
+            </a>
+
+                        <a href="https://survivalworld.fr/user/register" class="sidebar-btn sidebar-btn-2 mt-2 sidebar-link">
+                <i class="icon bi bi-people-fill"></i>
+                <span class="text">Inscription</span>
+            </a>
+                            <div data-toggle="close-sidebar" class="sidebar-close">
+            <i class="bi bi-x-lg"></i>
+        </div>
+</nav>
+        <main id="content">
+            <div class="content-wrapper">
+                <div style="padding-bottom:70px;">
+
+                    <div id="topbar-mobile">
+    <div class="d-flex align-items-center">
+        <button data-toggle="open-sidebar" class="btn" type="button">
+            <i class="bi bi-list"></i>
+        </button>
+        <img src="https://survivalworld.fr/storage/img/logo.webp" width="50" alt="">
+        <h6 class="fw-bold mb-0 ms-3">
+            SurvivalWorld
+        </h6>
+    </div>
+    <div class="d-flex align-items-center pe-3">
+                <a href="https://survivalworld.fr/user/login" class="btn btn-sm btn-gradient-2">
+            <i class="icon bi bi-person-fill"></i>
+            <span class="text">Connexion</span>
+        </a>
+            </div>
+</div>
+
+                        <div id="vote" class="py-3">
+        <div class="row">
+            <div class="col-md-4">
+                <div style="position:sticky;top:15px;">
+                    <div class="card">
+
+                        <div class="card-body text-center position-relative" id="vote-card">
+                            <h3 class="fw-bold text-center mt-3">
+                                <i class="bi bi-star me-2"></i>Voter
+                            </h3>
+                            <div class="spinner-parent h-100">
+                                <div class="spinner-border text-white" role="status"></div>
+                            </div>
+                                                        <div class="d-none" data-vote-step="1">
+                                <form class="input-group mb-3" action="https://survivalworld.fr/vote/user" id="voteNameForm">
+
+                                        <input type="text" id="stepNameInput" name="name" class="form-control" value="" placeholder="Nom" required="">
+
+                                        <button type="submit" class="btn btn-primary">
+                                            Continuer
+                                            <span class="spinner-border spinner-border-sm load-spinner d-none" role="status"></span>
+                                        </button>
+                                </form>
+                            </div>
+					        
+                            <div class="h-100 row" data-vote-step="2">
+                                                                <div class="col-md-12">
+                                    <a class="btn btn-gradient w-100 btn-block my-2 d-flex justify-content-between align-items-center animated-arrow disabled" href="https://www.rpg-paradize.com/site-+SurvivalWorld++Survival+++SkyBlock++Arene+PvP+++1.8+-+1.19+-41299" target="_blank" rel="noopener noreferrer" data-vote-id="2" data-vote-url="https://survivalworld.fr/vote/site/2" data-vote-time="1700996290000">
+
+                                    <span>
+                                        <i class="bi bi-star-fill no-animation me-2"></i> Toutes les 1h30
+
+                                    </span>
+                                    <span><i class="bi bi-arrow-right d-none"></i></span>
+                                    <span class="badge vote-timer">00:23:53</span>
+                                    </a>
+                                </div>
+                                                                <div class="col-md-12">
+                                    <a class="btn btn-gradient  w-100 btn-block my-2 d-flex justify-content-between align-items-center animated-arrow" href="https://www.serveursminecraft.org/serveur/973/" target="_blank" rel="noopener noreferrer" data-vote-id="3" data-vote-url="https://survivalworld.fr/vote/site/3">
+
+                                    <span>
+                                        <i class="bi bi-star-fill no-animation me-2"></i> Toutes les 24h
+
+                                    </span>
+                                    <span><i class="bi bi-arrow-right"></i></span>
+                                    <span class="badge vote-timer"></span>
+                                    </a>
+                                </div>
+                                                                <div class="col-md-12">
+                                    <a class="btn btn-gradient  w-100 btn-block my-2 d-flex justify-content-between align-items-center animated-arrow" href="https://serveur-minecraft-vote.fr/serveurs/survivalworld.229/vote" target="_blank" rel="noopener noreferrer" data-vote-id="4" data-vote-url="https://survivalworld.fr/vote/site/4">
+
+                                    <span>
+                                        <i class="bi bi-star-fill no-animation me-2"></i> Toutes les 1h30
+
+                                    </span>
+                                    <span><i class="bi bi-arrow-right"></i></span>
+                                    <span class="badge vote-timer"></span>
+                                    </a>
+                                </div>
+                                                                <div class="col-md-12">
+                                    <a class="btn btn-gradient  w-100 btn-block my-2 d-flex justify-content-between align-items-center animated-arrow" href="https://serveur-prive.net/minecraft/survivalworld-survie-1-8-1-19-crack-on-88/vote" target="_blank" rel="noopener noreferrer" data-vote-id="5" data-vote-url="https://survivalworld.fr/vote/site/5">
+
+                                    <span>
+                                        <i class="bi bi-star-fill no-animation me-2"></i> Toutes les 1h30
+
+                                    </span>
+                                    <span><i class="bi bi-arrow-right"></i></span>
+                                    <span class="badge vote-timer"></span>
+                                    </a>
+                                </div>
+                                                                <div class="col-md-12">
+                                    <a class="btn btn-gradient  w-100 btn-block my-2 d-flex justify-content-between align-items-center animated-arrow" href="https://www.liste-serveurs-minecraft.org/vote/?idc=205850" target="_blank" rel="noopener noreferrer" data-vote-id="6" data-vote-url="https://survivalworld.fr/vote/site/6">
+
+                                    <span>
+                                        <i class="bi bi-star-fill no-animation me-2"></i> Toutes les 3h
+
+                                    </span>
+                                    <span><i class="bi bi-arrow-right"></i></span>
+                                    <span class="badge vote-timer"></span>
+                                    </a>
+                                </div>
+                                                                <div class="col-md-12">
+                                    <a class="btn btn-gradient  w-100 btn-block my-2 d-flex justify-content-between align-items-center animated-arrow" href="https://top-serveurs.net/minecraft/vote/survivalworld-65355b32ec669?pseudo=Mimipgm" target="_blank" rel="noopener noreferrer" data-vote-id="7" data-vote-url="https://survivalworld.fr/vote/site/7">
+
+                                    <span>
+                                        <i class="bi bi-star-fill no-animation me-2"></i> Toutes les 2h
+
+                                    </span>
+                                    <span><i class="bi bi-arrow-right"></i></span>
+                                    <span class="badge vote-timer"></span>
+                                    </a>
+                                </div>
+                                                            </div>
+
+                            <div class="d-none" data-vote-step="3">
+                                <p id="vote-result"></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                                    </div>
+
+            </div>
+
+            <div class="col-md-8">
+                <h3 class="fw-bold text-center mb-5 mt-3">
+                    <i class="bi bi-trophy me-2"></i>Classement
+                </h3>
+                                <section class="pt-2">
+                    <div class="col-12">
+                            <div id="ranks" class="d-flex justify-content-center ranks-hidden mt-5">
+
+                                <div class="rank rank1">
+                                    <div class="name">
+                                                                                    Helegias
+                                                                            </div>
+                                    <canvas data-rank="1" data-skin-url="https://crafthead.net/skin/Helegias" data-engine="three.js r142"></canvas>
+                                    <div class="cube">
+                                        <div class="face2">
+                                            <div class="number d-flex">
+                                                TOP
+                                                2
+                                                <i class="ms-2 bi bi-trophy-fill"></i>
+                                            </div>
+                                            <span class="value">
+                                                                                                    1184vts
+                                                                                            </span>
+                                        </div>
+                                        <div class="face1"></div>
+                                    </div>
+                                </div>
+                                <div class="rank rank2">
+                                    <div class="name">
+                                                                                    destrus90
+                                                                            </div>
+                                    <canvas data-rank="2" data-skin-url="https://crafthead.net/skin/destrus90"></canvas>
+                                    <div class="cube">
+
+                                        <div class="face2">
+                                            <div class="number d-flex">
+                                                TOP
+                                                1
+                                                <i class="ms-2 bi bi-trophy-fill"></i>
+                                            </div>
+                                            <span class="value">
+                                                                                                    1331vts
+                                                                                            </span>
+                                        </div>
+                                        <div class="face1"></div>
+                                    </div>
+                                </div>
+                                <div class="rank rank3">
+                                    <div class="name">
+                                                                                    Abyse999
+                                                                            </div>
+                                    <canvas data-rank="3" data-skin-url="https://crafthead.net/skin/Abyse999"></canvas>
+                                    <div class="cube">
+
+                                        <div class="face2">
+                                            <div class="number d-flex">
+                                                TOP
+                                                3
+                                                <i class="ms-2 bi bi-trophy-fill"></i>
+                                            </div>
+                                            <span class="value">
+                                                                                                    1109vts
+                                                                                            </span>
+                                        </div>
+                                        <div class="face1"></div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </section>
+                <div class="card" style="margin-top:60px;">
+                </div>
+                                                <div class="card mt-2">
+                    <div class="card-body py-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="row align-items-center flex-1">
+                                <div class="col-2 fw-bold">
+                                                                        <i class="bi bi-trophy-fill d-none d-md-inline-block mx-2"></i>
+                                                                        #1
+                                </div>
+                                <div class="col-10 d-flex align-items-center">
+                                    <img src="https://mc-heads.net/avatar/destrus90/64.png" width="40" class="rounded-pill" alt="">
+                                    <span class="ms-3 text-capitalize">
+                                        destrus90
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div class="fw-bold text-color-3">
+                                1331 votes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="card mt-2">
+                    <div class="card-body py-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="row align-items-center flex-1">
+                                <div class="col-2 fw-bold">
+                                                                        <i class="bi bi-trophy-fill d-none d-md-inline-block mx-2"></i>
+                                                                        #2
+                                </div>
+                                <div class="col-10 d-flex align-items-center">
+                                    <img src="https://mc-heads.net/avatar/Helegias/64.png" width="40" class="rounded-pill" alt="">
+                                    <span class="ms-3 text-capitalize">
+                                        Helegias
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div class="fw-bold text-color-3">
+                                1184 votes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="card mt-2">
+                    <div class="card-body py-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="row align-items-center flex-1">
+                                <div class="col-2 fw-bold">
+                                                                        <i class="bi bi-trophy-fill d-none d-md-inline-block mx-2"></i>
+                                                                        #3
+                                </div>
+                                <div class="col-10 d-flex align-items-center">
+                                    <img src="https://mc-heads.net/avatar/Abyse999/64.png" width="40" class="rounded-pill" alt="">
+                                    <span class="ms-3 text-capitalize">
+                                        Abyse999
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div class="fw-bold text-color-3">
+                                1109 votes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="card mt-2">
+                    <div class="card-body py-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="row align-items-center flex-1">
+                                <div class="col-2 fw-bold">
+                                                                        #4
+                                </div>
+                                <div class="col-10 d-flex align-items-center">
+                                    <img src="https://mc-heads.net/avatar/BryanGau/64.png" width="40" class="rounded-pill" alt="">
+                                    <span class="ms-3 text-capitalize">
+                                        BryanGau
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div class="fw-bold text-color-3">
+                                997 votes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="card mt-2">
+                    <div class="card-body py-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="row align-items-center flex-1">
+                                <div class="col-2 fw-bold">
+                                                                        #5
+                                </div>
+                                <div class="col-10 d-flex align-items-center">
+                                    <img src="https://mc-heads.net/avatar/Chlodine700/64.png" width="40" class="rounded-pill" alt="">
+                                    <span class="ms-3 text-capitalize">
+                                        Chlodine700
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div class="fw-bold text-color-3">
+                                946 votes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="card mt-2">
+                    <div class="card-body py-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="row align-items-center flex-1">
+                                <div class="col-2 fw-bold">
+                                                                        #6
+                                </div>
+                                <div class="col-10 d-flex align-items-center">
+                                    <img src="https://mc-heads.net/avatar/Keyaru/64.png" width="40" class="rounded-pill" alt="">
+                                    <span class="ms-3 text-capitalize">
+                                        Keyaru
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div class="fw-bold text-color-3">
+                                795 votes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="card mt-2">
+                    <div class="card-body py-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="row align-items-center flex-1">
+                                <div class="col-2 fw-bold">
+                                                                        #7
+                                </div>
+                                <div class="col-10 d-flex align-items-center">
+                                    <img src="https://mc-heads.net/avatar/louloump/64.png" width="40" class="rounded-pill" alt="">
+                                    <span class="ms-3 text-capitalize">
+                                        louloump
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div class="fw-bold text-color-3">
+                                785 votes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="card mt-2">
+                    <div class="card-body py-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="row align-items-center flex-1">
+                                <div class="col-2 fw-bold">
+                                                                        #8
+                                </div>
+                                <div class="col-10 d-flex align-items-center">
+                                    <img src="https://mc-heads.net/avatar/Yello_wait/64.png" width="40" class="rounded-pill" alt="">
+                                    <span class="ms-3 text-capitalize">
+                                        Yello_wait
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div class="fw-bold text-color-3">
+                                714 votes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="card mt-2">
+                    <div class="card-body py-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="row align-items-center flex-1">
+                                <div class="col-2 fw-bold">
+                                                                        #9
+                                </div>
+                                <div class="col-10 d-flex align-items-center">
+                                    <img src="https://mc-heads.net/avatar/Eliott015/64.png" width="40" class="rounded-pill" alt="">
+                                    <span class="ms-3 text-capitalize">
+                                        Eliott015
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div class="fw-bold text-color-3">
+                                679 votes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="card mt-2">
+                    <div class="card-body py-2">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="row align-items-center flex-1">
+                                <div class="col-2 fw-bold">
+                                                                        #10
+                                </div>
+                                <div class="col-10 d-flex align-items-center">
+                                    <img src="https://mc-heads.net/avatar/mimipgm1/64.png" width="40" class="rounded-pill" alt="">
+                                    <span class="ms-3 text-capitalize">
+                                        mimipgm1
+                                    </span>
+
+                                </div>
+                            </div>
+                            <div class="fw-bold text-color-3">
+                                493 votes
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            </div>
+
+        </div>
+    </div>
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="success" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold">Vote</h5>
+                <button type="button" class="btn-custom-close btn btn-md" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <div class="modal-body">
+                
+                
+                <div id="status-message"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-gradient-2" data-bs-dismiss="modal">Fermer</button>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+                </div>
+            </div>
+            <footer id="footer" class="card">
+    <div id="socialLinks">
+                        <a class="social-item" data-bs-toggle="tooltip" target="_blank" href="https://discord.gg/survivalworld" aria-label="Discord" data-bs-original-title="Discord">
+                    <i class="bi bi-bi bi-discord"></i>
+                </a>
+                        <a class="social-item" data-bs-toggle="tooltip" target="_blank" href="https://twitter.com/SurvivalWorldFR" aria-label="Twitter" data-bs-original-title="Twitter">
+                    <i class="bi bi-bi bi-twitter"></i>
+                </a>
+                        <a class="social-item" data-bs-toggle="tooltip" target="_blank" href="https://www.tiktok.com/@survivalworldfr" aria-label="TikTok" data-bs-original-title="TikTok">
+                    <i class="bi bi-bi bi-tiktok"></i>
+                </a>
+                        <a class="social-item" data-bs-toggle="tooltip" target="_blank" href="https://www.instagram.com/survivalworldfr/" aria-label="Instagram" data-bs-original-title="Instagram">
+                    <i class="bi bi-bi bi-instagram"></i>
+                </a>
+            </div>
+
+    <div class="card-body d-md-flex justify-content-between px-5" style="border-radius: 0 !important;">
+        <div>
+
+            Copyright © 2016-2023 SurvivalWorld - Tous droits réservés. Non affilié ou associé à Mojang et Microsoft. Mail: contact@survivalworld.fr
+        </div>
+        <div>
+            Propulsé par <a href="https://azuriom.com" target="_blank" rel="noopener noreferrer">Azuriom</a>.                        <a href="https://market.azuriom.com/resources/89" data-sloyni-copyright="" class="sloyni-copyright" target="_blank">Thème realisé par Sloyni.</a>
+                    </div>
+    </div>
+</footer>
+        </main>
+            </div>
+    
+
+    <!-- Scripts -->
+    <script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202311090101/show_ads_impl_with_ama.js?client=ca-pub-1630889937695286&amp;plah=survivalworld.fr" id="google_shimpl"></script><script src="https://survivalworld.fr/assets/themes/deluxe/js/theme.js?v1.0.17"></script>
+        <script src="https://survivalworld.fr/assets/vendor/bootstrap/js/bootstrap.bundle.min.js?v1.0.17"></script>
+    <script src="https://survivalworld.fr/assets/vendor/axios/axios.min.js?v1.0.17"></script>
+
+
+    <script src="https://unpkg.com/@jarstone/dselect/dist/js/dselect.js"></script>
+        <!-- Page level scripts -->
+    
+    <script src="https://unpkg.com/@popperjs/core@2" defer=""></script>
+    <script src="https://unpkg.com/tippy.js@6" defer=""></script>
+            <script src="https://ipv6-adapter.com/api/v1/api.js" async="" defer=""></script>
+    
+    <script src="https://survivalworld.fr/assets/themes/deluxe/js/plugins/vote.js?v1.0.17" defer=""></script>
+        <script src="https://survivalworld.fr/assets/themes/deluxe/js/libraries/skinview3d.min.js?v1.0.17" defer=""></script>
+    <script src="https://survivalworld.fr/assets/themes/deluxe/js/components/ranks.js?v1.0.17" defer=""></script>
+    <script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1630889937695286" crossorigin="anonymous" data-checked-head="true"></script>
+
+<script charset="UTF-8" src="//web.webpushs.com/js/push/a37aac5eb8e3c47a0e970d077b0e689f_1.js" async=""></script>
+    
+
+<ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><div id="aswift_0_host" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-1630889937695286&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1700994853&amp;plat=1%3A16777224%2C2%3A16777224%2C3%3A2162688%2C4%3A2162688%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1048576%2C32%3A32%2C41%3A32%2C42%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fsurvivalworld.fr%2Fvote&amp;ea=0&amp;pra=5&amp;wgl=1&amp;easpi=0&amp;asro=0&amp;asiscm=1&amp;aslmt=0.4&amp;asamt=-1&amp;asedf=0&amp;asefa=1&amp;aseiel=1~2~4&amp;ascmds=1&amp;uach=WyJtYWNPUyIsIjEzLjAuMCIsImFybSIsIiIsIjExOS4wLjYwNDUuMTA1IixudWxsLDAsbnVsbCwiNjQiLFtbIkhlYWRsZXNzQ2hyb21lIiwiMTE5LjAuNjA0NS4xMDUiXSxbIkNocm9taXVtIiwiMTE5LjAuNjA0NS4xMDUiXSxbIk5vdD9BX0JyYW5kIiwiMjQuMC4wLjAiXV0sMF0.&amp;dt=1700994852944&amp;bpp=12&amp;bdt=802&amp;idt=951&amp;shv=r20231109&amp;mjsv=m202311090101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;nras=1&amp;correlator=5605624090569&amp;frm=20&amp;pv=2&amp;ga_vid=1095566706.1700994854&amp;ga_sid=1700994854&amp;ga_hid=1591366029&amp;ga_fc=0&amp;u_tz=60&amp;u_his=2&amp;u_h=900&amp;u_w=1440&amp;u_ah=900&amp;u_aw=1440&amp;u_cd=30&amp;u_sd=1&amp;dmc=8&amp;adx=-12245933&amp;ady=-12245933&amp;biw=800&amp;bih=600&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C42532605%2C31079606%2C44809314%2C31078301%2C44807754%2C44807764%2C44808149%2C44808284%2C44809056&amp;oid=2&amp;pvsid=4326921600592477&amp;tmod=1537835513&amp;uas=0&amp;nvt=1&amp;fsapi=1&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1440%2C0%2C800%2C600%2C800%2C600&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;psd=W251bGwsbnVsbCxudWxsLDNd&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=967" data-google-container-id="a!1" data-load-complete="true"></iframe></div></ins><iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20231109/r20190131/zrt_lookup.html" style="display: none;"></iframe></html>
