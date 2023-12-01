@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run": "node index.js"
+    "run": "node index.js",
+    "start": "node launch.js"
   },
   "author": "",
   "license": "ISC",
